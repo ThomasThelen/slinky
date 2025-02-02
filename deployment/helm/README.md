@@ -9,8 +9,13 @@
 
 ### Quick-Start
 
+To make installing Slinky straightforward, we provide a [Helm](https://helm.sh) chart in this repository.
+
+Install the Chart by running:
+
 ```sh
-helm install slinky .
+cd helm
+helm install $YOUR_NAME .
 ```
 
 ### Ingress
@@ -35,3 +40,10 @@ helm install \
     slinky .
 ```
 
+### Scaling Workers
+
+To scale the number of workers processing datasets beyond the default, run:
+
+```sh
+kubectl scale --replicas=3 deployments/{dataset-pod-name}
+```
