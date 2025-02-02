@@ -1,5 +1,4 @@
-Installing Redlands Bindings on macOS
-=====================================
+# Installing Redlands Bindings on macOS
 
 The [Redland bindings](http://librdf.org/bindings/) can be harder to install than most Python packages.
 Specifically, you won't find pre-built wheels on [PyPi](https://pypi.org/), you have to install it from source, and you may run into linker issues.
