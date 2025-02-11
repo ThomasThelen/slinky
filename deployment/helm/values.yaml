@@ -10,12 +10,14 @@ image:
   redis:
     name: bitnami/redis
     tag: "7.0.4"
-
+  rqdashboard:
+    name: ghcr.io/dataoneorg/rqdashboard
+    tag: "1.0.0"
 # Common properties for Service defs
 service:
   type: ClusterIP
 
-# Port numbers used in a variety of places, like pod and servic
+# Port numbers used in a variety of places, like pod and service
 # defs
 port:
   redis: 6379

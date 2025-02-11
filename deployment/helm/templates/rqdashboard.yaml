@@ -16,7 +16,8 @@ spec:
     spec:
       containers:
         - name: rqdashboard
-          image: eoranged/rq-dashboard
+          image: "{{ .Values.image.rqdashboard.name }}:{{ default .Chart.AppVersion .Values.image.rqdashboard.tag }}"
+          imagePullPolicy: Never
           envFrom:
-            - configMapRef:
-                name: {{ .Release.Name }}-configmap
+          - configMapRef:
+              name: {{ .Release.Name }}-configmap
