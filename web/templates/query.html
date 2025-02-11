@@ -3,21 +3,7 @@
 <main role="main">
     <div class="content">
         <div class="queries">
-            <h1>Background</h1>
-            <div class="background-information">
-                <p>The DataONE Slinky service exposes a graph database containing metadata about data packages. Slinky
-                    follows the <a target="_blank" rel="noopener noreferrer" href="https://github.com/ESIPFed/science-on-schema.org">SOSO</a> schema for representing the data.</p>
-                <p>A SPARQL endpoint is deployed at <a href="{{endpoint}}">{{endpoint}}</a> for querying the graph.</p>
-                <p>More information about the graph structure, the services included in the deployment, and open issues-visit the
-                    Slinky <a target="_blank" rel="noopener noreferrer" href="https://github.com/dataONEorg/slinky">GitHub repository</a>.</p>
-            </div>
-            <h1>Example Queries</h1>
-            <div class="query">
-                <p>General query that lists all datasets with creators and descriptions. <button onclick="addDatasetQuery()">Try it out!</button></p>
-                <p>Query for datasets that take up more than 10Mb. <button onclick="addSizeQuery()">Try it out!</button></p>
-                <p>Finds all of the different organizations that have deposited data. <button onclick="addOrganizationQuery()">Try it out!</button></p>
-                <p>List all of the people involved with dataset submissions. <button onclick="addPersonQuery()">Try it out!</button></p>
-            </div>
+            <h1>Slinky Query Interface</h1>
             <div id="yasgui"></div>
             <script>
                 const yasgui = new Yasgui(document.getElementById("yasgui"), {
@@ -77,6 +63,20 @@ SELECT * where {
 }`);
                 }
             </script>
+
+            <
+        </div>
+        <div class="query">
+            <p>Count the number of datasets and authors. <button onclick="addDatasetQuery()">Try it out!</button></p>
+            <p>Find the joint-fundings between agencies. <button onclick="addDatasetQuery()">Try it out!</button></p>
+            <p>Find the most common funding sources.<button onclick="addDatasetQuery()">Try it out!</button></p>
+            <p>What are the highest connected projects, through funding agencies?. <button onclick="addDatasetQuery()">Try it out!</button></p>
+            <p>Have two people co-submitted datasets?. <button onclick="addDatasetQuery()">Try it out!</button></p>
+            <p>Retrieve the ORCID of all dataset submitters. <button onclick="addDatasetQuery()">Try it out!</button></p>
+            <p>General query that lists all datasets with creators and descriptions. <button onclick="addDatasetQuery()">Try it out!</button></p>
+            <p>Query for datasets that take up more than 10Mb. <button onclick="addSizeQuery()">Try it out!</button></p>
+            <p>Finds all of the different organizations that have deposited data. <button onclick="addOrganizationQuery()">Try it out!</button></p>
+            <p>List all of the people involved with dataset submissions. <button onclick="addPersonQuery()">Try it out!</button></p>
         </div>
     </div>
 </main>

@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+authors = [{name ="Bryce Mecum", email="mecum@nceas.ucsb.edu"}, {name="Thomas Thelen"}]
+name = "slinky"
+version = "0.3.0"
+description = "A CLI application and library for performing ETL operations on DataONE for knowledge graph construction"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.10"
+dependencies = [
+    "httpx>=0.28.1",
+    "rq-scheduler>=0.14.0",
+    "rq>=2.1.0",
+    "click>=8.1.8",
+    "rdflib>=7.1.3",
+    "rdflib-jsonld>=0.6.2",
+    "dataone-common>=3.5.2",
+    "requests>=2.32.3",
+    "redis>=5.2.1",
+    "dataone-libclient>=3.5.2",
+    "tqdm>=4.67.1",
+]
+
+[project.scripts]
+slinky="slinky.cli:cli"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.4",
+    "ruff>=0.9.4"
+]
+docs = [
+    "furo>=2024.8.6",
+    "myst-parser>=4.0.0",
+    "pytest>=8.3.4",
+    "ruff>=0.9.4",
+    "sphinx>=8.1.3",
+    "sphinxcontrib-mermaid>=1.0.0",
+]

@@ -17,3 +17,12 @@ Once the pre-requisites have been satisfied, the `slinky` package can be install
 ```sh
 pip install .
 ```
+
+## With Docker
+
+An alternative to installing the RDF library is to run slinky though a docker container. To do this first build the docker image and then run the slinky application via `docker run`.
+
+```bash
+docker build -t slinky .
+docker run slinky <slinky command 1 --option 1>
+```

@@ -12,7 +12,13 @@
   <body>
     <div class="banner">
         <div class="banner-items">
-            <a class="banner-item" href="{{deployment_base}}/">Home</a>
+          <img class='logo' src="../static/logo.webp" alt="Logo">
+          <div class="banner-items">
+              <a href="{{deployment_base}}/">Home</a>
+              <a href="#">Data</a>
+              <a href="#">News & Releases</a>
+              <a href="#">About</a>
+          </div>
         </div>
     </div>
     {% block content %}{% endblock %}

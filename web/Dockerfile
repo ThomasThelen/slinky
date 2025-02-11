@@ -3,7 +3,7 @@ FROM ghcr.io/dataoneorg/slinky:0.3.0
 WORKDIR /web
 ADD requirements.txt requirements.txt
 ADD --chown=slinky:slinky . .
-RUN python3 -m pip install -r requirements.txt --user
+RUN python3 -m pip install -r requirements.txt
 
 EXPOSE 8080
 
